@@ -31,5 +31,9 @@ public class CustomerUsersDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("User not found.");
     }
 
+    public com.inn.cafe.model.User getUserDetail() {
+        return userDetail;
+    }
+
 
 }
