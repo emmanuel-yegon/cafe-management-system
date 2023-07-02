@@ -14,6 +14,7 @@ import java.io.Serializable;
 @NamedQuery(name = "Product.getProductByCategory", query = "select new com.inn.cafe.wrapper.ProductWrapper(p.id,p.name) from Product p where p.category.id=:id and p.status='true'")
 
 @NamedQuery(name = "Product.getProductById", query = "select new com.inn.cafe.wrapper.ProductWrapper(p.id,p.name,p.description,p.price) from Product p where p.id=:id ")
+
 @Data
 @Entity
 @DynamicInsert
@@ -21,7 +22,7 @@ import java.io.Serializable;
 @Table(name = "product")
 public class Product implements Serializable {
 
-    private static final Long serialVersionUid = 123456L;
+    private static final Long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
