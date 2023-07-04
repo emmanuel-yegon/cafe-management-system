@@ -7,6 +7,10 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import java.io.Serializable;
 
+@NamedQuery(name = "Bill.getAllBills", query = "select b from Bill b order by b.id desc")
+
+@NamedQuery(name = "Bill.getBillByUserName", query = "select b from Bill b where b.createdBy=:username order by b.id desc")
+
 @Data
 @Entity
 @DynamicInsert
@@ -44,6 +48,6 @@ public class Bill implements Serializable {
     private String productDetail;
 
     @Column(name = "createdby")
-    private String createdBY;
+    private String createdBy;
 
 }
